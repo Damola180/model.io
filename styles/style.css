@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #e5e2e3;
+}
+hr {
+  margin: 3rem auto;
+  border-style: dotted none none none;
+  border-color: #ec994b;
+  border-width: 5px;
+  width: 4%;
+}
+
+h2,
+h3 {
+  font-weight: 300;
+  margin: 0.15rem;
+}
+
+span {
+  font-weight: 700;
+}
+/* navbar */
+
+.navbar {
+  background-color: #e5e2e3;
+
+  width: 90%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+ul {
+  list-style-type: none;
+}
+.nav a {
+  margin-left: 4rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+
+/* intro-section */
+.intro-section {
+  display: flex;
+  align-items: center;
+  z-index: 99999;
+}
+
+.photo {
+  height: 55rem;
+  max-width: 37%;
+  margin: -3px;
+  object-fit: cover;
+}
+
+.intro-photo {
+  flex-basis: 50%;
+  opacity: 0.9;
+}
+.intro-div {
+  flex-basis: 50%;
+  margin-left: -5rem;
+}
+.intro-text {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 250px;
+  animation-name: myanime;
+  animation-duration: 2s;
+  position: relative;
+}
+
+@keyframes myanime {
+  0% {
+    right: -1000px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+.intro-word {
+  margin-top: -5em;
+  text-align: left;
+  margin-left: 37em;
+}
+.bnt {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 200;
+
+  border: 1px solid #ec994b;
+  padding: 0.5rem 2rem;
+
+  color: #fff;
+  background-color: #ec994b;
+  outline: 0.125rem solid #ec994b;
+  outline-offset: 0.25rem;
+  position: relative;
+  animation-name: btnamine;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  opacity: 0;
+  transition: transform;
+  transition-duration: 1s;
+}
+
+@keyframes btnamine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn:hover {
+  transform: rotateY(180deg);
+}
+.btn:active {
+  transform: rotate(360deg);
+}
+
+/* price */
+#price {
+  width: 90%;
+  margin: auto;
+}
+
+.price-container {
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+}
+.price-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin: auto;
+}
+.sev {
+  margin-bottom: 2.5rem;
+  font-style: italic;
+  font-weight: 300;
+}
+.each-price {
+  border-radius: 11.5px;
+  margin: 0 3rem;
+}
+
+.price-btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 50%;
+  border: 2px solid #ec994b;
+  padding: 0.5em 2rem;
+  border-radius: 7px;
+  box-shadow: 0 3px 10px 0px hsl(223, 47%, 23%);
+  color: grey;
+  background-color: #e5e2e3;
+}
+
+/* join */
+
+#login h1 {
+  text-align: center;
+}
+
+input[type="email"] {
+  width: 40%;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: 0px;
+  padding-left: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+.login-btn {
+  color: #fff;
+  background-color: #ec994b;
+  height: 2.5rem;
+  border: 0px;
+  border-radius: 0.4rem;
+  width: 10%;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#login {
+  box-shadow: 0 3px 10px 0px hsl(223, 47%, 23%);
+  width: 70%;
+  margin: 4rem auto;
+
+  padding: 4rem;
+  text-align: center;
+  bottom: 240px;
+}
+
+/* footer */
+footer {
+  background-color: #ec994b;
+  padding: 5rem 3rem;
+  text-align: center;
+}
+/* media queries */
+@media (max-width: 700px) {
+  .navbar {
+    position: static;
+    width: 100%;
+  }
+  .navbar-container {
+    justify-content: end;
+  }
+
+  /* intro-section */
+  .intro-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .photo {
+    height: 40rem;
+    width: 100%;
+    margin: -3px;
+    object-fit: cover;
+  }
+
+  .intro-photo {
+    flex-basis: 50%;
+    opacity: 0.9;
+  }
+  .intro-div {
+    flex-basis: 10%;
+    margin-left: 0rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .intro-text {
+    font-family: "Bebas Neue", cursive;
+    font-weight: 400;
+    font-size: 100px;
+    width: 100%;
+  }
+
+  .intro-word {
+    margin-top: -1.6em;
+    margin-left: 0em;
+    text-align: right;
+  }
+  .bnt {
+    text-align: center;
+    margin-top: 0rem;
+  }
+
+  .btn {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 200;
+
+    border: 1px solid #ec994b;
+    padding: 0.5rem 2rem;
+
+    color: #fff;
+    background-color: #ec994b;
+    outline: 0.125rem solid #ec994b;
+    outline-offset: 0.25rem;
+  }
+
+  /* price */
+  #price {
+    width: 90%;
+    margin: auto;
+  }
+
+  .price-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .each-price {
+    margin-bottom: 2.5rem;
+  }
+
+  /* login */
+  #login {
+    width: 90%;
+  }
+  #login h1 {
+    text-align: center;
+    font-size: large;
+  }
+  input[type="email"] {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 1rem;
+    border: 0px;
+    padding-left: 1rem;
+    cursor: pointer;
+    outline: none;
+    display: block;
+  }
+  .login-btn {
+    color: #fff;
+    background-color: #ec994b;
+    height: 2.5rem;
+    border: 0px;
+    border-radius: 0.4rem;
+    width: 40%;
+
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin-top: 0.2rem;
+  }
+}
